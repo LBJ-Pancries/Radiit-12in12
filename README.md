@@ -31,11 +31,13 @@ http://localhost:3000
 http://localhost:3000/links
 
 保存
+
 `git status`
 `git add .`
 `git commit -am "generate link scaffold"`
 
 合并分支
+
 `git checkout master`
 `git merge link_scaffold`
 
