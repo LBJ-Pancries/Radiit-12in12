@@ -1,14 +1,10 @@
 # How to build a Reddit or Hacker News Style Web App in Rails 4 （文字版）
 
 
-<div class="toc">
- </div>
-
-
 ----------
 
 
-##创建新的专案：Radiit
+<h2>创建新的专案：Radiit</h2>
 
 `cd 12_in_12_challenge/demo`
 `rails new radiit`
@@ -32,21 +28,7 @@ http://localhost:3000
 `rails g scaffold link title:string url:string`
 `rails s`
 
-
 http://localhost:3000/links
-
-
-![Alt text](http://ojjhaj1wp.bkt.clouddn.com/2017-09-11-023842.jpg)
-
-
-![](http://ojjhaj1wp.bkt.clouddn.com/2017-09-11-024229.jpg)
-
-
-![](http://ojjhaj1wp.bkt.clouddn.com/2017-09-11-024342.jpg)
-
-
-![](http://ojjhaj1wp.bkt.clouddn.com/2017-09-11-024422.jpg)
-
 
 保存
 `git status`
@@ -58,7 +40,7 @@ http://localhost:3000/links
 `git merge link_scaffold`
 
 
-##增加用户登陆系统：Add devise and users model
+<h2>增加用户登陆系统：Add devise and users model</h2>
 
 
 `git checkout -b Add_devise_and_users_model`
@@ -103,10 +85,6 @@ http://localhost:3000/users/sign_up
 `rails c`
 `User.count`
 `@user = User.first`
-
-
-![](http://ojjhaj1wp.bkt.clouddn.com/2017-09-11-055426.jpg)
-
 
 退出
 `exit`
@@ -210,7 +188,7 @@ before_action :authenticate_user!, except: [:index, :show]
 `git checkout master`
 `git merge add_users`
 
-##添加结构和基本样式：Add structure and basic styling
+<h2>添加结构和基本样式：Add structure and basic styling</h2>
 
 `git checkout -b add_bootstrap`
 
@@ -364,7 +342,7 @@ before_action :authenticate_user!, except: [:index, :show]
 <% end %>
 ```
 
-修改文件 app/views/links/_form.html.erb
+修改文件 app/views/links/form.html.erb
 
 ```erb
 ...
@@ -544,7 +522,7 @@ before_action :authenticate_user!, except: [:index, :show]
 `git merge add_bootstrap`
 
 
-##添加基本表决权：Add acts as votable
+<h2>添加基本表决权：Add acts as votable<h2>
 
 `git checkout -b add_acts_as_votable`
 
@@ -665,7 +643,7 @@ google搜索: acts as votable
 `git merge add_acts_as_votable`
 
 
-##添加留言板：Add comments
+<h2>添加留言板：Add comments</h2>
 
 `git checkout -b add_comments`
 
@@ -783,7 +761,7 @@ google搜索: acts as votable
 
 
 
-修改文件 app/views/comments/_comment.html.erb
+修改文件 app/views/comments/comment.html.erb
 
 ```erb
 <%= div_for(comment) do %>
@@ -810,7 +788,7 @@ google搜索: acts as votable
 `git merge Add_comments`
 
 
-##添加名字到用户：Add name to users
+<h2>添加名字到用户：Add name to users</h2>
 
 `git checkout -b Add_name_to_users`
 
